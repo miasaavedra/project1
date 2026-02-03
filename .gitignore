@@ -4,3 +4,11 @@ __pycache__/
 .DS_Store
 
 project1/venv/
+.ipynb_checkpoints/
+venvenv/
+.venv/
+__pycache__/
+.DS_Store
+*.pyc
+
+>>>>>>> d9614ff48a34973176fedad012e23660e6bdfccc

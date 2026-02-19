@@ -1,22 +1,29 @@
 # Mia Saavedra
 ## Dataset: Pima Indians Diabetes Database (https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
 
-This dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective of the dataset is to diagnostically predict whether or not a patient has diabetes, based on certain diagnostic measurements included in the dataset. Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage
+This dataset, originally collected by the National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), contains diagnostic measurements used to predict diabetes status.
 
-Observations: 768 female patients
-Predictors: 8 clinical and demographic variables
-Target Variable: Outcome (0 = No Diabetes, 1 = Diabetes)
+The dataset includes:
+* 768 adult female patients (age ≥ 21)
+* All participants are of Pima Indian heritage
+* 8 predictor variables (clinical and demographic)
+* 1 target variable: Outcome (0 = No Diabetes, 1 = Diabetes)
 
-Several variables contain zero values that represent biologically impossible measurements and were treated as missing during cleaning.
+Several variables contain biologically impossible zero values, which were treated as missing during data cleaning.
 
 ## Project Overview:
-This project analyzes the Pima Indians Diabetes dataset to explore relationships between clinical measurements and diabetes status. The objective is to perform structured exploratory data analysis (EDA), address data quality issues, and examine how variables such as glucose, BMI, blood pressure, age, and pregnancy history relate to diabetes outcome.
+This project conducts structured exploratory data analysis to examine relationships between clinical predictors and diabetes status.
+* The analysis focuses on:
+ * Assessing diabetes prevalence
+ * Comparing predictor distributions by diabetes outcome
+ * Evaluating age-group differences in prevalence
+ * Investigating correlations among numeric variables
 
-The analysis integrates statistical reasoning with clinical interpretation to better understand patterns in the data.
+Objective: To investigate how clinical measurements relate to diabetes status through structured exploratory data analysis, integrating statistical reasoning with clinical interpretation while explicitly addressing data quality considerations and assumptions.
 
 ## Variables:
 * Pregnancies: Number of pregnancies
-* Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test
+* Glucose: Plasma glucose concentration at 2 hours in an oral glucose tolerance test
 * BloodPressure: Diastolic blood pressure (mm Hg)
 * SkinThickness: Triceps skin fold thickness (mm)
 * Insulin: 2-Hour serum insulin (muU/ml)
@@ -35,16 +42,16 @@ The analysis integrates statistical reasoning with clinical interpretation to be
   * BMI
 * Replaced invalid zero values with NaN and analyzed only non-zero values
 * Treated Outcome as a categorical target variable for analysis
-* Created a clinically meaningful age_group variable
+* Created a clinically meaningful age_group variable for grouped comparisons
 
-## Analyses Performed:
-* 10 Point Inspection
-* Zero-value frequency and percentage analysis
-* Clinical validation of glucose and blood pressure values
-* Age group prevalence analysis
-* Grouped comparison of average glucose by diabetes status
-* Class imbalance assessment
-* Correlation heatmap of numeric variables
+## Deliverables/Outputs:
+* Comprehensive 10-Point Data Inspection
+* Zero-value (missing data) analysis and cleaning documentation
+* Exploratory analysis of key predictors (glucose, blood pressure, age, BMI)
+* Age-group diabetes prevalence analysis
+* Data validation and class imbalance assessment
+* Correlation matrix and heatmap of numeric variables
+* Presentation slides summarizing methods, results, limitations, and implications
 
 ## Key Findings:
 * 34.9% of patients in the dataset have diabetes.
@@ -52,11 +59,11 @@ The analysis integrates statistical reasoning with clinical interpretation to be
 * Insulin (48.7%) and SkinThickness (29.6%) had high rates of missing values.
 * Average glucose levels were 31.68 mg/dL higher in diabetic patients.
 * Diabetes prevalence increased with age, peaking in the Mature Adult (50–59) age group.
-  * The lower prevalence in the 60+ group may reflect smaller sample size rather than reduced risk.
+  * The lower prevalence in the 60+ group may reflect a smaller sample size rather than a reduced risk.
 
 ## Limitations:
-* Observational dataset cannot establish causation.
-* Missing data encoded as zeros in original dataset.
+* The dataset is an observational dataset and does not allow causation.
+* Missing data encoded as zeros in the original dataset.
 * No lifestyle variables (diet, exercise, medication) available.
 * Dataset includes only adult female patients (21+) of Pima Indian heritage, limiting generalizability.
 
@@ -66,4 +73,3 @@ This project was implemented in Python using:
 * numpy
 * matplotlib
 * seaborn
-
